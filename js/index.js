@@ -42,20 +42,25 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let aTags = document.querySelectorAll ('nav a');
+// let aTags = document.querySelector ('nav a');
 
 //How would you get a setAttribute to work? 
 // aTags.setAttribute('src', siteContent['nav']["nav-item-1"])
 
-// aTags[0].textContent = siteContent['nav']['nav-item-1'];
-// aTags[1].textContent = siteContent['nav']['nav-item-2'];
-// aTags[2].textContent = siteContent['nav']['nav-item-3'];
-// aTags[3].textContent = siteContent['nav']['nav-item-4'];
-// aTags[4].textContent = siteContent['nav']['nav-item-5'];
-// aTags[5].textContent = siteContent['nav']['nav-item-6'];
+aTags[0].textContent = siteContent['nav']['nav-item-1'];
+aTags[1].textContent = siteContent['nav']['nav-item-2'];
+aTags[2].textContent = siteContent['nav']['nav-item-3'];
+aTags[3].textContent = siteContent['nav']['nav-item-4'];
+aTags[4].textContent = siteContent['nav']['nav-item-5'];
+aTags[5].textContent = siteContent['nav']['nav-item-6'];
 
-aTags.forEach((link, i) => {
-  link.innerHTML = siteContent.nav[`nav-item-${i+1}`]
-});
+aTags.forEach(colors => colors.style.color = 'green');
+
+
+
+// aTags.forEach((link, i) => {
+//   link.innerHTML = siteContent.nav[`nav-item-${i+1}`]
+// });
 
 const ctaImg = document.querySelector('#cta-img')
 ctaImg.setAttribute('src', siteContent['cta']["img-src"]);
@@ -105,7 +110,7 @@ mainContent[0].getElementsByTagName('p')[4].textContent = siteContent
 const midImg = document.getElementById('middle-img');
 midImg.src = siteContent['main-content']['middle-img-src'];
 
-//cant get contact to work yet.
+
 
 const contactContent = document.querySelector('.contact');
 
@@ -121,6 +126,11 @@ contactContent.getElementsByTagName('p')[1].textContent = siteContent
 
 contactContent.getElementsByTagName('p')[2].textContent = siteContent 
 ['contact']['email'];
+
+const footerContent = document.querySelector('footer');
+
+footerContent.getElementsByTagName('p')[0].textContent = siteContent
+['footer']['copyright'];
 
 
 
