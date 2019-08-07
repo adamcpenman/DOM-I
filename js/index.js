@@ -68,6 +68,10 @@ button.textContent = siteContent['cta']['button'];
 
 const mainContent = document.querySelectorAll ('.main-content');
 
+//I dont understand why I have to put the [0] ect. What is the "0" representing?
+// And for the second number, are we calling for the first time it is used, 2nd, ect?
+
+
 mainContent[0].getElementsByTagName('h4')[0].textContent = siteContent
 ['main-content']['features-h4'];
 
@@ -101,17 +105,25 @@ mainContent[0].getElementsByTagName('p')[4].textContent = siteContent
 const midImg = document.getElementById('middle-img');
 midImg.src = siteContent['main-content']['middle-img-src'];
 
-const contactContent = document.getElementsByClassName('contact')[0];
-console.log(contact);
+//cant get contact to work yet.
 
-contactContent.getElementsByTagName('h4')[0].innerHTML = siteContent
+const contactContent = document.querySelector('.contact');
+
+
+contactContent.getElementsByTagName('h4')[0].textContent = siteContent
 ['contact']['contact-h4'];
 
-// const contact = document.getElementsByClassName("contact")[0];
-// console.log(contact);
+contactContent.getElementsByTagName('p')[0].textContent = siteContent 
+['contact']['address'];
 
-// contact.getElementsByTagName("h4")[0].innerHTML =
-//   siteContent["contact"]["contact-h4"];
+contactContent.getElementsByTagName('p')[1].textContent = siteContent 
+['contact']['phone'];
+
+contactContent.getElementsByTagName('p')[2].textContent = siteContent 
+['contact']['email'];
+
+
+
 
 
 
