@@ -40,3 +40,87 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let aTags = document.querySelectorAll ('nav a');
+
+//How would you get a setAttribute to work? 
+// aTags.setAttribute('src', siteContent['nav']["nav-item-1"])
+
+// aTags[0].textContent = siteContent['nav']['nav-item-1'];
+// aTags[1].textContent = siteContent['nav']['nav-item-2'];
+// aTags[2].textContent = siteContent['nav']['nav-item-3'];
+// aTags[3].textContent = siteContent['nav']['nav-item-4'];
+// aTags[4].textContent = siteContent['nav']['nav-item-5'];
+// aTags[5].textContent = siteContent['nav']['nav-item-6'];
+
+aTags.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`]
+});
+
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.setAttribute('src', siteContent['cta']["img-src"]);
+
+const ctaText = document.querySelector('h1')
+ctaText.textContent = siteContent['cta']['h1'];
+
+const button = document.querySelector('button')
+button.textContent = siteContent['cta']['button'];
+
+const mainContent = document.querySelectorAll ('.main-content');
+
+mainContent[0].getElementsByTagName('h4')[0].textContent = siteContent
+['main-content']['features-h4'];
+
+mainContent[0].getElementsByTagName('p')[0].textContent = siteContent
+['main-content']['features-content'];
+
+mainContent[0].getElementsByTagName('h4')[1].textContent = siteContent
+['main-content']['about-h4'];
+
+mainContent[0].getElementsByTagName('p')[1].textContent = siteContent
+['main-content']['about-content'];
+
+mainContent[0].getElementsByTagName('h4')[2].textContent = siteContent
+['main-content']['services-h4'];
+
+mainContent[0].getElementsByTagName('p')[2].textContent = siteContent
+['main-content']['services-content'];
+
+mainContent[0].getElementsByTagName('h4')[3].textContent = siteContent 
+['main-content']['product-h4'];
+
+mainContent[0].getElementsByTagName('p')[3].textContent = siteContent 
+['main-content']['product-content'];
+
+mainContent[0].getElementsByTagName('h4')[4].textContent = siteContent 
+['main-content']['vision-h4'];
+
+mainContent[0].getElementsByTagName('p')[4].textContent = siteContent
+['main-content']['vision-content'];
+
+const midImg = document.getElementById('middle-img');
+midImg.src = siteContent['main-content']['middle-img-src'];
+
+const contactContent = document.getElementsByClassName('contact')[0];
+console.log(contact);
+
+contactContent.getElementsByTagName('h4')[0].innerHTML = siteContent
+['contact']['contact-h4'];
+
+// const contact = document.getElementsByClassName("contact")[0];
+// console.log(contact);
+
+// contact.getElementsByTagName("h4")[0].innerHTML =
+//   siteContent["contact"]["contact-h4"];
+
+
+
+
+
+
+
+
+
+
+
+
